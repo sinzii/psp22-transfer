@@ -1,17 +1,16 @@
 import { ContractDeployment, popTestnet } from 'typink';
-import greeterMetadata from './artifacts/greeter/greeter.json';
+import psp22Metadata from './artifacts/psp22/psp22.json';
 
 export enum ContractId {
-  GREETER = 'greeter',
+  PSP22 = 'psp22'
 }
 
-export const greeterDeployments: ContractDeployment[] = [
+export const deployments: ContractDeployment[] = [
   {
-    id: ContractId.GREETER,
-    metadata: greeterMetadata as any,
+    id: ContractId.PSP22,
+    metadata: psp22Metadata as any,
     network: popTestnet.id,
-    address: '5HJ2XLhBuoLkoJT5G2MfMWVpsybUtcqRGWe29Fo26JVvDCZG',
+    address: '13JSR8RUSxtg11MLg2Pj5jV7Yh9sh9gCnjFW7ReHGmDj5Rvq',
   },
 ];
 
-export const deployments = [...greeterDeployments];
